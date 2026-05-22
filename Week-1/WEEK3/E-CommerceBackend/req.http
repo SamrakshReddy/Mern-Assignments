@@ -1,0 +1,52 @@
+//create 3 products
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productName": "mac",
+    "price": 50000,
+    "brand": "macc"
+}
+###
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productName": "Laptop",
+    "price": 80000,
+    "brand": "Dell"
+}
+###
+POST http://localhost:4000/product-api/products     
+Content-Type: application/json
+
+{
+    "productName": "Headphones",
+    "price": 3000,
+    "brand": "Sony"
+}
+
+### create user req
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Mahi",
+    "email": "ma@gmail.com",
+    "password": "mahitha",
+    "cart":[]
+}
+
+
+### req to add product to cart
+PUT http://localhost:4000/user-api/user-cart/user-Id/698194fe93d2c8ee9a69ebae/product-Id/698194bb93d2c8ee9a69ebab
+
+### read user by id
+GET http://localhost:4000/user-api/users/698194fe93d2c8ee9a69ebae
+
+### quantity of product in cart
+PUT http://localhost:4000/user-api/user-cart-enhanced/user-Id/698194fe93d2c8ee9a69ebae/product-Id/698198e676f6aa2ef1e00726
+
+
+###compare
+GET http://localhost:4000/user-api/compare/698198e676f6aa2ef1e00726
