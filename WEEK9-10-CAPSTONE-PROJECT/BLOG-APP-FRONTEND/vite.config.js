@@ -1,0 +1,27 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  server: {
+    proxy: {
+      '/common-api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
+      '/user-api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
+      '/author-api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
+      '/admin-api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
+    }
+  }
+})

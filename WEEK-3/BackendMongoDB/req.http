@@ -1,0 +1,75 @@
+###read all users 
+GET http://localhost:4000/user-api/users
+
+###Read user by ID
+GET http://localhost:4000/user-api/users/697dbc7f8d12beb2475ea488
+
+### Creaete a new user
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+  "username":"Mahi",
+  "password":"Mahi",
+   "age":20
+}
+
+### Update user by ID
+PUT http://localhost:4000/user-api/users/697dbeff5f2b38d4e17fa3bf
+Content-Type: application/json
+
+{
+  "username":"Mahi",
+  "password":"Mahi",
+   "age":25
+}
+
+### Delete user by ID
+DELETE http://localhost:4000/user-api/users/697dbeff5f2b38d4e17fa3bf
+
+
+
+### PRODUCT APIs
+
+### Read all products
+GET http://localhost:4000/product-api/products
+
+###Read product by ID
+GET http://localhost:4000/product-api/products/697dce79c5f784ac1e17715f
+
+###Read product
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+  "pid":101,
+  "productName":"Laptop",
+  "price":50000
+
+}
+
+###update product by ID
+PUT http://localhost:4000/product-api/products/697dd13c2a4434b32a484c2f
+Content-Type: application/json
+
+{
+  "pid":101,
+  "productName":"Laptop",
+  "price":70000
+
+}
+
+
+
+
+### User authentication(Login) req
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+  "username":"Mahi",
+  "password":"Mahi"
+}
+
+### reuest for protected route
+GET http://localhost:4000/user-api/test

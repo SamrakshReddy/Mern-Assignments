@@ -1,0 +1,16 @@
+import CountryCard from "./CountryCard";
+
+function CountryList({ countries }) {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+      {countries.map((country) => (
+        <CountryCard
+          key={country.name.common}
+          country={country}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default CountryList;
